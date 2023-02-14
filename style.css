@@ -93,6 +93,11 @@ hr{
   /* -------------------
       courses style
 ------------------------ */
+.Courses{
+    display: flex;
+    gap: 23px;
+
+   }
 .course .course-banner img{
       width: 224px;
        height: 104px;
@@ -102,17 +107,48 @@ hr{
 .course-info{
    display: flex;
    align-items: center;
-   gap: 10px;
+   justify-content: space-between;
 }
 
-.fa-star{
-     font-size: 16px;
+.course-duration{
+    background-color: rgba(232, 168, 179, 0.738);
+   border-radius: 15px;
+   color: rgb(247, 73, 102);
 }
 
-.fa-star .filled{
-   color: #ffc014;
-
+.icons-svg svg{
+   color: red;
+   width: 20px;
+    
 }
-.fa-star .empty{
-     color: #AEAEAE;
+
+
+/* responsive section  */
+  @media only screen and (max-width: 600px) {
+  
+.players {
+    
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+.blogs {
+    
+    grid-template-columns: repeat(1, 1fr);
+}
+.Courses {
+    display: block;
+    gap: 23px;
+}
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  
+.players {
+    
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.blogs {
+    
+    grid-template-columns: repeat(1, 1fr);
+}
 }
